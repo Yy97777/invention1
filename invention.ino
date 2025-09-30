@@ -7,7 +7,7 @@
 #define RST_PIN         9          
 #define SS_PIN          10  //就是模組上的SDA接腳
 
-MFRC522 mfrc522;   // 建立MFRC522實體
+MFRC522 mfrc522;  
 
 const int sensorPin = 6;
 long laag = 0;
@@ -27,12 +27,12 @@ void setup() {
   lcd.init();
   lcd.backlight();
   pinMode(5,OUTPUT);
-  SPI.begin();        // 初始化SPI介面
+  SPI.begin();        
 
-  mfrc522.PCD_Init(SS_PIN, RST_PIN); // 初始化MFRC522卡
+  mfrc522.PCD_Init(SS_PIN, RST_PIN); 
   Serial.print(F("Reader "));
   Serial.print(F(": "));
-  mfrc522.PCD_DumpVersionToSerial(); // 顯示讀卡設備的版本
+  mfrc522.PCD_DumpVersionToSerial(); 
 }
 
 void loop()
@@ -133,3 +133,4 @@ void v5_()
 //      MFRC522::PICC_Type piccType = mfrc522.PICC_GetType(mfrc522.uid.sak);
 //      Serial.println(mfrc522.PICC_GetTypeName(piccType));  //顯示卡片的類型
       
+
