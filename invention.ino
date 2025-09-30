@@ -41,6 +41,7 @@ void loop()
  v2_();
  v3_();
  v4_();
+ v5_();
  
 }
 //void Refresh()SSs
@@ -133,4 +134,5 @@ void v5_()
 //      MFRC522::PICC_Type piccType = mfrc522.PICC_GetType(mfrc522.uid.sak);
 //      Serial.println(mfrc522.PICC_GetTypeName(piccType));  //顯示卡片的類型
       
+
 
